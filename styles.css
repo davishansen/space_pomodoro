@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  background: #000;
+}
+canvas {
+  display: block;
+  position: absolute;
+  z-index: 0;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+#info-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(10, 10, 30, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  color: #eee;
+  z-index: 2;
+  width: 320px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  transition: opacity 0.4s ease;
+}
+#info-card.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+#info-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+#info-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  min-height: 60px;
+}
+#close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.7rem;
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #fff;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+#music-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255,255,255,0.1);
+  color: #eee;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.2rem;
+  z-index: 3;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+#music-btn:hover {
+  background: rgba(255,255,255,0.3);
+}
+#timer-display {
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: #fff;
+}
+#timer-controls button {
+  background: rgba(255, 255, 255, 0.1);
+  color: #eee;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  margin: 0 0.3rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+#timer-controls button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
