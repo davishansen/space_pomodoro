@@ -59,9 +59,10 @@ canvas {
 }
 .typewriter {
   overflow: hidden;
-  white-space: nowrap;
+  white-space: normal; /* Allow wrapping */
   border-right: 2px solid #fff;
   animation: blink 1s step-end infinite;
+  display: inline-block;
 }
 @keyframes blink {
   50% { border-color: transparent; }
